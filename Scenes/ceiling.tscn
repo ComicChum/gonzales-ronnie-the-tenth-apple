@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b7pgd0cwf20u"]
+
+[ext_resource type="PackedScene" uid="uid://dd1r82rdvtl52" path="res://Assets/dungeon_assets/building/ceiling.glb" id="1_bycnq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_27ou7"]
+size = Vector3(3.9665527, 0.7167969, 4.015625)
+
+[node name="ceiling" type="StaticBody3D" unique_id=675310172]
+
+[node name="ceiling" parent="." unique_id=1809276406 instance=ExtResource("1_bycnq")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=346350030]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14160156, 0)
+shape = SubResource("BoxShape3D_27ou7")
