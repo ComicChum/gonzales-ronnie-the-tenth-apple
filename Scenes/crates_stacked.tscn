@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dobvtrpdflux0"]
+
+[ext_resource type="PackedScene" uid="uid://c4kn7yjemjwaq" path="res://Assets/dungeon_assets/props/crates_stacked.glb" id="1_sp6va"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sida3"]
+size = Vector3(0.97998047, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5vuh1"]
+size = Vector3(1.5076904, 0.6064453, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dqk8q"]
+size = Vector3(1.5076904, 0.6064453, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lglpq"]
+size = Vector3(1.5212097, 0.62109375, 1.0014343)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oyvd0"]
+radius = 0.3881836
+height = 0.9211426
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gue70"]
+radius = 0.1796875
+height = 0.99035645
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pflm0"]
+radius = 0.1796875
+height = 0.99035645
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_60kg5"]
+height = 0.4727173
+radius = 0.34716797
+
+[node name="crates_stacked" type="StaticBody3D" unique_id=435455155]
+
+[node name="crates_stacked2" parent="." unique_id=1874181689 instance=ExtResource("1_sp6va")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1780477597]
+transform = Transform3D(0.9934008, 0, 0.114694424, 0, 1, 0, -0.114694424, 0, 0.9934008, 0.44873863, 0.49728113, 0.5445652)
+shape = SubResource("BoxShape3D_sida3")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=537960987]
+transform = Transform3D(0.9891829, 0, 0.14668733, 0, 1, 0, -0.14668733, 0, 0.9891829, -0.22070476, 0.3005038, -0.39378342)
+shape = SubResource("BoxShape3D_5vuh1")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=218233664]
+transform = Transform3D(0.8912125, 0, 0.45358616, 0, 1, 0, -0.45358616, 0, 0.8912125, -0.22070476, 0.90674514, -0.3787559)
+shape = SubResource("BoxShape3D_dqk8q")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=16240779]
+transform = Transform3D(0.94840115, 0, -0.3170729, 0, 1, 0, 0.3170729, 0, 0.94840115, -0.20396148, 1.5029609, -0.36913761)
+shape = SubResource("BoxShape3D_lglpq")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="." unique_id=1669990766]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.390404, 0.4106161, 0.57181466)
+shape = SubResource("CapsuleShape3D_oyvd0")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="." unique_id=369860475]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.27149975, 1.6634141, -0.47380924)
+shape = SubResource("CapsuleShape3D_gue70")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="." unique_id=1401069285]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02487111, 1.6634141, -0.16131666)
+shape = SubResource("CapsuleShape3D_pflm0")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="." unique_id=845817304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3939371, 1.8420846, -0.46505)
+shape = SubResource("CylinderShape3D_60kg5")

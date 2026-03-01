@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://ceq20ync0ouhy"]
+
+[ext_resource type="PackedScene" uid="uid://beuvpm71nh21n" path="res://Assets/SwordModel.glb" id="1_q5s87"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_833jy"]
+size = Vector3(0.20101929, 2.6938477, 0.93151855)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dq71c"]
+size = Vector3(0.7609558, 0.15216064, 1.3887024)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_afqmt"]
+height = 1.6459961
+radius = 0.31835938
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_34krb"]
+height = 0.73638916
+radius = 1.0185547
+
+[node name="sword_monument" type="StaticBody3D" unique_id=171835892]
+
+[node name="SwordModel" parent="." unique_id=1605925778 instance=ExtResource("1_q5s87")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=69732614]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01133728, 1.9728756, -0.034240723)
+shape = SubResource("BoxShape3D_833jy")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1256677082]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013259888, 3.4061956, -0.0526886)
+shape = SubResource("BoxShape3D_dq71c")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=404066369]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.330134, -0.033634424)
+shape = SubResource("CylinderShape3D_afqmt")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=2037465233]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.33926392, 0)
+shape = SubResource("CylinderShape3D_34krb")
