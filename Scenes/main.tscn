@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://cjd17g504dxi2" path="res://Scenes/candles.tscn" id="14_fevyy"]
 [ext_resource type="PackedScene" uid="uid://cmh5xnk70ddq5" path="res://Scenes/table_m.tscn" id="14_jkdf5"]
 [ext_resource type="PackedScene" uid="uid://c2n5d5017ud6l" path="res://Scenes/chair.tscn" id="16_hibaj"]
+[ext_resource type="PackedScene" uid="uid://bvajkjvm6jpax" path="res://Scenes/light_blue_flame.tscn" id="20_hibaj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
 
@@ -1280,5 +1281,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.6239, -4.7096453, -19.132
 [node name="torch" parent="Basement/basement walls" unique_id=23696371 instance=ExtResource("12_6iyac")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.443933, -2.463333, -26.10815)
 
+[node name="light_blue_flame" parent="Basement/basement walls/torch" unique_id=1780328100 instance=ExtResource("20_hibaj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37404323, 0.29180145)
+
 [node name="torch2" parent="Basement/basement walls" unique_id=465748402 instance=ExtResource("12_6iyac")]
 transform = Transform3D(-0.9999341, 0, -0.011483908, 0, 1, 0, 0.011483908, 0, -0.9999341, -15.763657, -2.1571908, 4.1919246)
+
+[node name="light_blue_flame" parent="Basement/basement walls/torch2" unique_id=1570554565 instance=ExtResource("20_hibaj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003865242, 0.37195063, 0.3365953)
