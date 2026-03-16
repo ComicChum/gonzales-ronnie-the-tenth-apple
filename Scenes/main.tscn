@@ -29,12 +29,17 @@ sky_material = SubResource("ProceduralSkyMaterial_7dm0k")
 [sub_resource type="Environment" id="Environment_0xm2m"]
 background_mode = 2
 sky = SubResource("Sky_ig7tw")
+ssil_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.1464
+volumetric_fog_albedo = Color(0.2592936, 0.25929374, 0.2592937, 1)
 
 [node name="Main" type="Node3D" unique_id=1845837693]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1652480202]
-transform = Transform3D(0.1503838, -0.50000006, 0.85286856, 0.08682412, 0.8660254, 0.49240398, -0.9848078, -1.5131034e-08, 0.17364827, 52.899998, 15.099998, 6.7000003)
+transform = Transform3D(0.1503838, -0.50000006, 0.85286856, 0.08682412, 0.8660254, 0.49240398, -0.9848078, -1.5131034e-08, 0.17364827, 46.6901, 18.02553, 6.7000003)
 light_color = Color(0.54201216, 0.12646773, 4.813075e-08, 1)
+light_energy = 2.689
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=500329680]
 environment = SubResource("Environment_0xm2m")
@@ -779,6 +784,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.333857, 0, 6.888568)
 [node name="sword_monument" parent="1st floor/props" unique_id=171835892 instance=ExtResource("11_h1bgf")]
 transform = Transform3D(0.9999275, 0, 0.0120425485, 0, 1, 0, -0.0120425485, 0, 0.9999275, 24.003122, 0, -0.023998499)
 
+[node name="OmniLight3D" type="OmniLight3D" parent="1st floor/props/sword_monument" unique_id=501698258]
+transform = Transform3D(0.99999994, 0, -1.8626451e-09, 0, 1, 0, 1.8626451e-09, 0, 0.99999994, 0.016065598, 0.7531986, -0.021975324)
+light_color = Color(0.4791624, 0.95287603, 0.78921115, 1)
+light_volumetric_fog_energy = 4.776
+light_size = 0.602
+shadow_enabled = true
+distance_fade_enabled = true
+omni_range = 10.143882
+
+[node name="SpotLight3D" type="SpotLight3D" parent="1st floor/props/sword_monument" unique_id=505813041]
+transform = Transform3D(0.013677446, 0.4155046, 0.9094882, -0.0007469578, 0.9095773, -0.41553408, -0.9999061, 0.005004096, 0.01275106, -0.21232796, 1.0273318, -0.002557069)
+light_color = Color(0.4791624, 0.95287603, 0.78921115, 1)
+light_energy = 5.571
+light_volumetric_fog_energy = 7.062
+light_size = 0.335
+shadow_enabled = true
+spot_range = 6.534777
+spot_angle = 38.002525
+
 [node name="Hall of Feasts" type="Node" parent="1st floor" unique_id=1989039573]
 
 [node name="stone_pillar2" parent="1st floor/Hall of Feasts" unique_id=1114023296 instance=ExtResource("10_d1ilt")]
@@ -802,26 +826,11 @@ transform = Transform3D(0.6335024, 0, -0.7737407, 0, 1, 0, 0.7737407, 0, 0.63350
 [node name="plate_food3" parent="1st floor/Hall of Feasts" unique_id=1604307151 instance=ExtResource("12_b3802")]
 transform = Transform3D(0.915964, 0, 0.40126047, 0, 1, 0, -0.40126047, 0, 0.915964, 15.395834, 0.9623221, 0)
 
-[node name="candles" parent="1st floor/Hall of Feasts" unique_id=1859677219 instance=ExtResource("14_fevyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.635848, 1.0077554, -0.2553653)
-
-[node name="candles2" parent="1st floor/Hall of Feasts" unique_id=102743480 instance=ExtResource("14_fevyy")]
-transform = Transform3D(0.8265799, 0, 0.56281936, 0, 1, 0, -0.56281936, 0, 0.8265799, 16.161875, 1.0077554, 0.4725085)
-
-[node name="candles3" parent="1st floor/Hall of Feasts" unique_id=1407182254 instance=ExtResource("14_fevyy")]
-transform = Transform3D(0.78563017, 0, -0.6186964, 0, 1, 0, 0.6186964, 0, 0.78563017, 19.906519, 1.0077554, -0.6899803)
-
 [node name="plate_food4" parent="1st floor/Hall of Feasts" unique_id=1736660751 instance=ExtResource("12_b3802")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.063818, 0.9623221, 5.8914804)
 
 [node name="plate_food6" parent="1st floor/Hall of Feasts" unique_id=1474510815 instance=ExtResource("12_b3802")]
 transform = Transform3D(0.98755693, 0, 0.15726186, 0, 1, 0, -0.15726186, 0, 0.98755693, 15.467806, 0.9623221, 5.8025126)
-
-[node name="candles5" parent="1st floor/Hall of Feasts" unique_id=222203245 instance=ExtResource("14_fevyy")]
-transform = Transform3D(0.9418113, 0, 0.33614203, 0, 1, 0, -0.33614203, 0, 0.9418113, 16.089903, 1.0077554, 6.4529567)
-
-[node name="candles6" parent="1st floor/Hall of Feasts" unique_id=1193434129 instance=ExtResource("14_fevyy")]
-transform = Transform3D(0.78563017, 0, -0.6186964, 0, 1, 0, 0.6186964, 0, 0.78563017, 19.906519, 1.0077554, 5.2015)
 
 [node name="plate_food7" parent="1st floor/Hall of Feasts" unique_id=28351475 instance=ExtResource("12_b3802")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.063818, 0.9623221, -4.8885946)
@@ -829,35 +838,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.063818, 0.9623221, -4.8885
 [node name="plate_food8" parent="1st floor/Hall of Feasts" unique_id=1906161006 instance=ExtResource("12_b3802")]
 transform = Transform3D(0.6335024, 0, -0.7737407, 0, 1, 0, 0.7737407, 0, 0.6335024, 17.747032, 0.9623221, -4.8885946)
 
-[node name="candles7" parent="1st floor/Hall of Feasts" unique_id=659574768 instance=ExtResource("14_fevyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.635848, 1.0077554, -5.14396)
-
-[node name="candles8" parent="1st floor/Hall of Feasts" unique_id=294149515 instance=ExtResource("14_fevyy")]
-transform = Transform3D(0.8265799, 0, 0.56281936, 0, 1, 0, -0.56281936, 0, 0.8265799, 16.161875, 1.0077554, -4.416086)
-
-[node name="candles9" parent="1st floor/Hall of Feasts" unique_id=2071564350 instance=ExtResource("14_fevyy")]
-transform = Transform3D(0.78563017, 0, -0.6186964, 0, 1, 0, 0.6186964, 0, 0.78563017, 19.906519, 1.0077554, -5.578575)
-
 [node name="plate_food11" parent="1st floor/Hall of Feasts" unique_id=1127076604 instance=ExtResource("12_b3802")]
 transform = Transform3D(0.6335024, 0, -0.7737407, 0, 1, 0, 0.7737407, 0, 0.6335024, 17.747032, 0.9623221, -9.918581)
 
 [node name="plate_food12" parent="1st floor/Hall of Feasts" unique_id=1454997805 instance=ExtResource("12_b3802")]
 transform = Transform3D(0.915964, 0, 0.40126047, 0, 1, 0, -0.40126047, 0, 0.915964, 15.395834, 0.9623221, -9.918581)
 
-[node name="candles10" parent="1st floor/Hall of Feasts" unique_id=2065377129 instance=ExtResource("14_fevyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.635848, 1.0077554, -10.173946)
-
 [node name="plate_food14" parent="1st floor/Hall of Feasts" unique_id=1661330890 instance=ExtResource("12_b3802")]
 transform = Transform3D(0.8026302, 0, -0.59647703, 0, 1, 0, 0.59647703, 0, 0.8026302, 19.046701, 0.9623221, 10.852248)
 
 [node name="plate_food15" parent="1st floor/Hall of Feasts" unique_id=1523285668 instance=ExtResource("12_b3802")]
 transform = Transform3D(-0.850242, 0, -0.526392, 0, 1, 0, 0.526392, 0, -0.850242, 15.072377, 0.9623221, 11.139673)
-
-[node name="candles13" parent="1st floor/Hall of Feasts" unique_id=1947185087 instance=ExtResource("14_fevyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.635848, 1.0077554, 11.019131)
-
-[node name="candles14" parent="1st floor/Hall of Feasts" unique_id=1765676534 instance=ExtResource("14_fevyy")]
-transform = Transform3D(0.6649176, 0, 0.74691683, 0, 1, 0, -0.74691683, 0, 0.6649176, 17.624016, 1.0077554, 11.696019)
 
 [node name="chair" parent="1st floor/Hall of Feasts" unique_id=1432619518 instance=ExtResource("16_hibaj")]
 transform = Transform3D(0.14100486, 0, -0.9900089, 0, 1, 0, 0.9900089, 0, 0.14100486, 13.814456, 0, 1.4744983)
@@ -978,6 +969,41 @@ transform = Transform3D(0.0039095343, 0, 0.9999924, 0, 1, 0, -0.9999924, 0, 0.00
 
 [node name="plate_food" parent="1st floor/Hall of Feasts" unique_id=484238815 instance=ExtResource("12_b3802")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.063818, 0.9623221, 0)
+
+[node name="Candles" type="Node3D" parent="1st floor/Hall of Feasts" unique_id=1535918583]
+
+[node name="candles" parent="1st floor/Hall of Feasts/Candles" unique_id=1859677219 instance=ExtResource("14_fevyy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.635848, 1.0077554, -0.2553653)
+
+[node name="candles2" parent="1st floor/Hall of Feasts/Candles" unique_id=102743480 instance=ExtResource("14_fevyy")]
+transform = Transform3D(0.8265799, 0, 0.56281936, 0, 1, 0, -0.56281936, 0, 0.8265799, 16.161875, 1.0077554, 0.4725085)
+
+[node name="candles3" parent="1st floor/Hall of Feasts/Candles" unique_id=1407182254 instance=ExtResource("14_fevyy")]
+transform = Transform3D(0.78563017, 0, -0.6186964, 0, 1, 0, 0.6186964, 0, 0.78563017, 19.906519, 1.0077554, -0.6899803)
+
+[node name="candles5" parent="1st floor/Hall of Feasts/Candles" unique_id=222203245 instance=ExtResource("14_fevyy")]
+transform = Transform3D(0.9418113, 0, 0.33614203, 0, 1, 0, -0.33614203, 0, 0.9418113, 16.089903, 1.0077554, 6.4529567)
+
+[node name="candles6" parent="1st floor/Hall of Feasts/Candles" unique_id=1193434129 instance=ExtResource("14_fevyy")]
+transform = Transform3D(0.78563017, 0, -0.6186964, 0, 1, 0, 0.6186964, 0, 0.78563017, 19.906519, 1.0077554, 5.2015)
+
+[node name="candles7" parent="1st floor/Hall of Feasts/Candles" unique_id=659574768 instance=ExtResource("14_fevyy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.635848, 1.0077554, -5.14396)
+
+[node name="candles8" parent="1st floor/Hall of Feasts/Candles" unique_id=294149515 instance=ExtResource("14_fevyy")]
+transform = Transform3D(0.8265799, 0, 0.56281936, 0, 1, 0, -0.56281936, 0, 0.8265799, 16.161875, 1.0077554, -4.416086)
+
+[node name="candles9" parent="1st floor/Hall of Feasts/Candles" unique_id=2071564350 instance=ExtResource("14_fevyy")]
+transform = Transform3D(0.78563017, 0, -0.6186964, 0, 1, 0, 0.6186964, 0, 0.78563017, 19.906519, 1.0077554, -5.578575)
+
+[node name="candles10" parent="1st floor/Hall of Feasts/Candles" unique_id=2065377129 instance=ExtResource("14_fevyy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.635848, 1.0077554, -10.173946)
+
+[node name="candles13" parent="1st floor/Hall of Feasts/Candles" unique_id=1947185087 instance=ExtResource("14_fevyy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.635848, 1.0077554, 11.019131)
+
+[node name="candles14" parent="1st floor/Hall of Feasts/Candles" unique_id=1765676534 instance=ExtResource("14_fevyy")]
+transform = Transform3D(0.6649176, 0, 0.74691683, 0, 1, 0, -0.74691683, 0, 0.6649176, 17.624016, 1.0077554, 11.696019)
 
 [node name="Basement" type="Node" parent="." unique_id=798225610]
 
